@@ -1,3 +1,16 @@
+#functions
+function dayPerMonthWage {
+   echo "Calculating using days per month"
+   monthWage=`expr 20 \* 20 \* 8`
+   echo "Monthly wage for 20 working days is $monthWage"
+}
+
+function hourPerMonthWage {
+   echo "Calculating using hours per month"
+   hourWage=`expr 100 \* 8`
+   echo "Monthly wage for 100 hours per month $hourWage"
+}
+
 #displayStart
 echo "WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM"
 #checkAttendance
@@ -21,12 +34,6 @@ echo "After adding part time wage, the Total wage is $partTimeWage"
 #solving using switch cases
 read -p "how do you want to calculate the wage ? 1.DayPerMonth OR 2.HoursPerMonth : " choice
 case $choice in 
-1) echo "Calculating using days per month"
-   monthWage=`expr 20 \* 20 \* 8`
-   echo "Monthly wage for 20 working days is $monthWage"
-;;
-2) echo "Calculating using hours per month"
-   hourWage=`expr 100 \* 8`
-   echo "Monthly wage for 100 hours per month $hourWage"
-;;
-esac 
+1) dayPerMonthWage ;;
+2) hourPerMonthWage ;;
+esac
