@@ -11,4 +11,9 @@ do
   else	
 	echo "Employee number $var is Absent"
   fi
-done 
+done
+#CalculateDailyEmployeeWage
+dailyWage=`expr 20 \* 8`
+echo "Daily employee wage is $dailyWage"
+
+ 
