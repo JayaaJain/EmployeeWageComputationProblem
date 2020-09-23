@@ -34,6 +34,12 @@ echo "After adding part time wage, the Total wage is $partTimeWage"
 #solving using switch cases
 read -p "how do you want to calculate the wage ? 1.DayPerMonth OR 2.HoursPerMonth : " choice
 case $choice in 
-1) dayPerMonthWage ;;
-2) hourPerMonthWage ;;
+1) dayMonthWage=$(dayPerMonthWage) ;;
+2) hourMonthWage=$(hourPerMonthWage) ;;
 esac
+DailyTotalWage() {
+echo "Total wage is : $2 and daily wage is : $1"
+#echo "Day wage is $hourWage"
+}
+
+DailyTotalWage $dailyWage $partTimeWage
