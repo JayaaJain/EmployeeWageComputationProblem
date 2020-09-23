@@ -18,4 +18,9 @@ echo "Daily employee wage is $dailyWage"
 #partTimeEmployee&Wage
 partTimeWage=`expr dailyWage + 20 \* 8`
 echo "After adding part time wage, the Total wage is $partTimeWage"
- 
+#solving using switch cases
+read -p "how do you want to calculate the wage ? : " choice
+case $choice in 
+1) echo "Calculating using month"
+;;
+2) echo "Calculating using hours and month" 
