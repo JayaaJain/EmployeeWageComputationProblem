@@ -15,5 +15,7 @@ done
 #CalculateDailyEmployeeWage
 dailyWage=`expr 20 \* 8`
 echo "Daily employee wage is $dailyWage"
-
+#partTimeEmployee&Wage
+partTimeWage=`expr dailyWage + 20 \* 8`
+echo "After adding part time wage, the Total wage is $partTimeWage"
  
