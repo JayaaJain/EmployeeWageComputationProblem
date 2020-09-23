@@ -1,3 +1,4 @@
+monthWage=0
 #functions
 function dayPerMonthWage {
    echo "Calculating using days per month"
@@ -7,8 +8,8 @@ function dayPerMonthWage {
 
 function hourPerMonthWage {
    echo "Calculating using hours per month"
-   hourWage=`expr 100 \* 8`
-   echo "Monthly wage for 100 hours per month $hourWage"
+   monthWage=`expr 100 \* 8`
+   echo "Monthly wage for 100 hours per month $monthWage"
 }
 
 #displayStart
@@ -34,12 +35,13 @@ echo "After adding part time wage, the Total wage is $partTimeWage"
 #solving using switch cases
 read -p "how do you want to calculate the wage ? 1.DayPerMonth OR 2.HoursPerMonth : " choice
 case $choice in 
-1) dayMonthWage=$(dayPerMonthWage) ;;
-2) hourMonthWage=$(hourPerMonthWage) ;;
+1) dayPerMonthWage
+;;
+2) hourPerMonthWage
+;;
 esac
 DailyTotalWage() {
-echo "Total wage is : $2 and daily wage is : $1"
-#echo "Day wage is $hourWage"
+echo "Total wage is : $2 , daily wage is : $1 and Day wage is $3"
 }
 
-DailyTotalWage $dailyWage $partTimeWage
+DailyTotalWage $dailyWage $partTimeWage $monthWage
